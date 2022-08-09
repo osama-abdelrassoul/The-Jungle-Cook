@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:the_jungle_cook/constants.dart';
 import 'package:the_jungle_cook/utilities.dart';
 
-class MainButton extends StatelessWidget {
+class CustomButton extends StatelessWidget {
   final bool isPrimaryButton;
   final VoidCallback onPressed;
   final String title;
 
-  const MainButton({
+  const CustomButton({
     Key? key,
     required this.title,
     required this.isPrimaryButton,

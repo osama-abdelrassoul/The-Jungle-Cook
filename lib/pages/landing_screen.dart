@@ -24,10 +24,10 @@ class LandingScreen extends StatelessWidget {
                       fit: BoxFit.cover,
                       colorFilter: ColorFilter.mode(
                           Colors.black.withOpacity(0.1), BlendMode.dstATop),
-                      image: AssetImage(kLogo),
+                      image: const AssetImage(kLogo),
                     ),
                     color: kPrimaryOrangeColor,
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                       bottomRight: Radius.circular(35),
                       bottomLeft: Radius.circular(35),
                     ),
@@ -65,17 +65,17 @@ class LandingScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              MainButton(
+              CustomButton(
                 title: 'Sign in',
                 isPrimaryButton: true,
                 onPressed: () {},
               ),
-              MainButton(
+              CustomButton(
                 title: 'Sign up',
                 isPrimaryButton: false,
                 onPressed: () {},
               ),
-              SizedBox(height: 10)
+              const SizedBox(height: 10)
             ],
           ),
           Positioned(
