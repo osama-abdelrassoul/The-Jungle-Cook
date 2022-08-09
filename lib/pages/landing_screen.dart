@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_jungle_cook/constants.dart';
+import 'package:the_jungle_cook/pages/pages.dart';
 import 'package:the_jungle_cook/utilities.dart';
 import 'package:the_jungle_cook/widgets/widgets.dart';
 
@@ -68,23 +69,33 @@ class LandingScreen extends StatelessWidget {
               CustomButton(
                 title: 'Sign in',
                 isPrimaryButton: true,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => SignInScreen(),
+                    ),
+                  );
+                },
               ),
               CustomButton(
                 title: 'Sign up',
                 isPrimaryButton: false,
                 onPressed: () {},
               ),
-              const SizedBox(height: 10)
+              const SizedBox(height: 35)
             ],
           ),
           Positioned(
             bottom: screenSize.height / 2,
             left: screenSize.width / 2 - avatarRadius,
-            child: CircleAvatar(
-              radius: avatarRadius,
-              backgroundColor: Colors.white,
-              child: Image.asset(kLogo),
+            child: Hero(
+              tag: 'logo',
+              child: CircleAvatar(
+                radius: avatarRadius,
+                backgroundColor: Colors.white,
+                child: Image.asset(kLogo),
+              ),
             ),
           ),
         ],
