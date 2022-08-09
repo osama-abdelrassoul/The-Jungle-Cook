@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_jungle_cook/pages/pages.dart';
 
 class CustomBackButton extends StatelessWidget {
   const CustomBackButton({
@@ -11,7 +12,12 @@ class CustomBackButton extends StatelessWidget {
       children: [
         ElevatedButton(
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (BuildContext context) => const LandingScreen(),
+              ),
+            );
           },
           style: ElevatedButton.styleFrom(
             primary: Colors.white,

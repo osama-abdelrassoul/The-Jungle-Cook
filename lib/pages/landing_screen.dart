@@ -70,7 +70,7 @@ class LandingScreen extends StatelessWidget {
                 title: 'Sign in',
                 isPrimaryButton: true,
                 onPressed: () {
-                  Navigator.push(
+                  Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                       builder: (BuildContext context) => SignInScreen(),
@@ -81,7 +81,14 @@ class LandingScreen extends StatelessWidget {
               CustomButton(
                 title: 'Sign up',
                 isPrimaryButton: false,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => SignUpScreen(),
+                    ),
+                  );
+                },
               ),
               const SizedBox(height: 35)
             ],

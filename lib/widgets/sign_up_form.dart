@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:the_jungle_cook/widgets/widgets.dart';
 import 'package:the_jungle_cook/constants.dart';
 
-class SignInForm extends StatelessWidget {
-  const SignInForm({
+class SignUpForm extends StatelessWidget {
+  const SignUpForm({
     Key? key,
     required this.screenSize,
   }) : super(key: key);
@@ -16,7 +16,7 @@ class SignInForm extends StatelessWidget {
       children: [
         Container(
           margin: const EdgeInsets.all(17),
-          height: screenSize.height * 0.4,
+          height: screenSize.height * 0.5,
           width: screenSize.width * 0.85,
           decoration: const BoxDecoration(
             color: Colors.white,
@@ -31,6 +31,12 @@ class SignInForm extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               CustomTextField(
+                screenSize: screenSize,
+                hintText: 'Enter your name',
+                icon: const Icon(Icons.account_circle_outlined),
+                isPassword: false,
+              ),
+              CustomTextField(
                 keyboardType: TextInputType.emailAddress,
                 screenSize: screenSize,
                 hintText: 'Enter your E-mail',
@@ -43,6 +49,12 @@ class SignInForm extends StatelessWidget {
                 icon: const Icon(Icons.password_outlined),
                 isPassword: true,
               ),
+              CustomTextField(
+                screenSize: screenSize,
+                hintText: 'Confirm your password',
+                icon: const Icon(Icons.password_outlined),
+                isPassword: true,
+              ),
             ],
           ),
         ),
@@ -51,7 +63,7 @@ class SignInForm extends StatelessWidget {
           child: Container(
             color: Colors.white,
             child: const Text(
-              'Sign In',
+              'Sign Up',
               style: TextStyle(
                 color: kPrimaryOrangeColor,
                 fontSize: 30,
