@@ -4,7 +4,7 @@ import 'package:the_jungle_cook/pages/pages.dart';
 void main() {
   runApp(
     const MaterialApp(
-      home: LandingScreen(),
+      home: RootApp(),
       debugShowCheckedModeBanner: false,
     ),
   );

@@ -6,12 +6,14 @@ class CustomButton extends StatelessWidget {
   final bool isPrimaryButton;
   final VoidCallback onPressed;
   final String title;
+  final bool isLoading;
 
   const CustomButton({
     Key? key,
     required this.title,
     required this.isPrimaryButton,
     required this.onPressed,
+    this.isLoading = false,
   }) : super(key: key);
 
   @override
