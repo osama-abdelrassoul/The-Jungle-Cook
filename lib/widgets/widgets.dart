@@ -3,3 +3,7 @@ export 'sign_in_form.dart';
 export 'custom_back_button.dart';
 export 'custom_text_field.dart';
 export 'sign_up_form.dart';
+export 'recipe_card.dart';
+export 'genre_text.dart';
+export 'cook_time_and_ingredient.dart';
+export 'view_and_save_buttons.dart';
