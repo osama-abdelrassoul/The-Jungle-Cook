@@ -10,6 +10,8 @@ const String kLogo = 'assets/images/logo.png';
 
 const String kLogoWithName = 'assets/images/logo_with_name.png';
 
+const String us = 'assets/images/img.png';
+
 const String kFoodExample = 'assets/images/food_example.jpg';
 
 const String kFoodExample2 = 'assets/images/food_example_2.png';
@@ -19,12 +21,7 @@ const TextStyle kOptionStyle =
 
 const List<Widget> kWidgetOptions = <Widget>[
   HomeScreen(),
-  Center(
-    child: Text(
-      'Likes',
-      style: kOptionStyle,
-    ),
-  ),
+  ProfilePage(),
   Center(
     child: Text(
       'Saved',

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:the_jungle_cook/constants.dart';
 import 'package:the_jungle_cook/utilities.dart';
 import 'package:the_jungle_cook/widgets/widgets.dart';
 
@@ -51,9 +50,19 @@ class RecipeCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                GenreText(
-                  mainColor: mainColor,
-                  genre: genre,
+                Container(
+                  padding: const EdgeInsets.only(left: 4),
+                  decoration: BoxDecoration(
+                    border: Border(
+                      left: BorderSide(color: mainColor, width: 2),
+                    ),
+                  ),
+                  child: Text(
+                    genre,
+                    style: TextStyle(
+                      color: mainColor,
+                    ),
+                  ),
                 ),
                 Text(
                   recipeName,
@@ -68,8 +77,8 @@ class RecipeCard extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   maxLines: 4,
                   style: const TextStyle(
-                    color: kPrimaryDarkGrayColor,
-                    fontWeight: FontWeight.w500,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w300,
                   ),
                 ),
                 CookTimeAndIngredient(
