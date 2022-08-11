@@ -31,8 +31,8 @@ class BigRecipeCard extends StatelessWidget {
       children: [
         Container(
           margin: EdgeInsets.all(avatarRadius / 2),
-          height: screenSize.height * 0.65,
-          width: screenSize.width * 0.65,
+          height: screenSize.height * .6,
+          width: screenSize.width * 0.60,
           decoration: BoxDecoration(
             color: backgroundColor,
             borderRadius: const BorderRadius.all(
@@ -42,13 +42,13 @@ class BigRecipeCard extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.fromLTRB(
               screenSize.width * 0.04,
-              avatarRadius * 0.55,
+              avatarRadius,
               screenSize.width * 0.04,
               screenSize.width * 0.04,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
                   padding: const EdgeInsets.only(left: 4),
@@ -68,7 +68,7 @@ class BigRecipeCard extends StatelessWidget {
                   recipeName,
                   style: const TextStyle(
                     color: Colors.black,
-                    fontSize: 25,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -85,7 +85,9 @@ class BigRecipeCard extends StatelessWidget {
                   cookTime: cookTime,
                   ingredientNumber: ingredientNumber,
                 ),
-                ViewAndSaveButtons(mainColor: mainColor)
+                ViewAndSaveButtons(
+                  mainColor: mainColor,
+                )
               ],
             ),
           ),
