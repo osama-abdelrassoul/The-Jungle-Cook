@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_jungle_cook/constants.dart';
-import 'package:the_jungle_cook/widgets/recipe_card.dart';
+import 'package:the_jungle_cook/UI/widgets/big_recipe_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
           itemCount: 5,
           itemBuilder: (context, index) {
             return Center(
-              child: RecipeCard(
+              child: BigRecipeCard(
                 genre: 'Chinese',
                 imageUrl: kFoodExample,
                 recipeName: 'Hot & Prawn Noodles',

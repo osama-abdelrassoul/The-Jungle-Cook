@@ -7,4 +7,4 @@ export 'root_app.dart';
 export 'landing_screen.dart';
 export 'profile.dart';
 export 'setting_screen.dart';
-export 'upload_Recipes.dart';
+export 'upload_recipes.dart';

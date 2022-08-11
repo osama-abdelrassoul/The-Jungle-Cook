@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:the_jungle_cook/constants.dart';
-import 'package:the_jungle_cook/pages/pages.dart';
+import 'package:the_jungle_cook/UI/screens/screens.dart';
 import 'package:the_jungle_cook/utilities.dart';
-import 'package:the_jungle_cook/widgets/widgets.dart';
+import 'package:the_jungle_cook/UI/widgets/widgets.dart';
 
 class LandingScreen extends StatelessWidget {
   const LandingScreen({Key? key}) : super(key: key);

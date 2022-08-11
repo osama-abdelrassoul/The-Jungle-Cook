@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../constants.dart';
-import '../json/profile_details.dart';
+import 'package:the_jungle_cook/constants.dart';
+import 'package:the_jungle_cook/json/profile_details.dart';
 
-class RecipesCard extends StatelessWidget {
-  const RecipesCard({
+class SmallRecipeCard extends StatelessWidget {
+  const SmallRecipeCard({
     Key? key,
     required this.screenSize,
   }) : super(key: key);
@@ -23,7 +23,7 @@ class RecipesCard extends StatelessWidget {
           children: List.generate(recipesDetails.length, (index) {
             return Padding(
               padding: const EdgeInsets.only(top: 8.0),
-              child: Container(
+              child: SizedBox(
                 width: screenSize.width * 0.9,
                 child: Stack(
                   children: [
@@ -32,7 +32,7 @@ class RecipesCard extends StatelessWidget {
                       child: Container(
                         width: screenSize.width * 0.8,
                         decoration: BoxDecoration(
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                   blurRadius: 10,
                                   color: Colors.grey,
@@ -52,7 +52,7 @@ class RecipesCard extends StatelessWidget {
                               padding: EdgeInsets.only(
                                   top: screenSize.height * 0.001,
                                   bottom: screenSize.height * 0.011),
-                              child: Container(
+                              child: SizedBox(
                                 width: screenSize.width * 0.4,
                                 child: Column(
                                   mainAxisAlignment:
@@ -137,12 +137,14 @@ class RecipesCard extends StatelessWidget {
                     Container(
                       width: screenSize.width * 0.3,
                       height: screenSize.height * 0.16,
-                      margin: EdgeInsets.only(bottom: 40),
+                      margin: const EdgeInsets.only(bottom: 40),
                       child: CircleAvatar(
                         backgroundColor: Colors.white.withOpacity(0),
                         radius: screenSize.height * 0.115,
                         child: ClipRRect(
-                          child: Image.asset(recipesDetails[index]['img']),borderRadius: BorderRadius.circular(screenSize.height * 0.45),
+                          borderRadius:
+                              BorderRadius.circular(screenSize.height * 0.45),
+                          child: Image.asset(recipesDetails[index]['img']),
                         ),
                       ),
                     )

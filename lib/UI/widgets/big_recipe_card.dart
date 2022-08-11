@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:the_jungle_cook/utilities.dart';
-import 'package:the_jungle_cook/widgets/widgets.dart';
+import 'package:the_jungle_cook/UI/widgets/widgets.dart';
 
-class RecipeCard extends StatelessWidget {
+class BigRecipeCard extends StatelessWidget {
   final String genre;
   final String imageUrl;
   final String recipeName;
@@ -11,7 +11,7 @@ class RecipeCard extends StatelessWidget {
   final int ingredientNumber;
   final Color mainColor;
 
-  const RecipeCard({
+  const BigRecipeCard({
     Key? key,
     required this.genre,
     required this.imageUrl,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import '../constants.dart';
-import '../json/profile_details.dart';
-
+import 'package:the_jungle_cook/constants.dart';
+import 'package:the_jungle_cook/json/profile_details.dart';
 
 class ReviewsDetails extends StatelessWidget {
   const ReviewsDetails({
@@ -15,7 +14,7 @@ class ReviewsDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: screenSize.width * 0.88,
       height: screenSize.height * 0.345,
       child: SingleChildScrollView(
@@ -40,16 +39,15 @@ class ReviewsDetails extends StatelessWidget {
                               child: CircleAvatar(
                                 radius: avatarRadius,
                                 backgroundColor: Colors.blue,
-                                backgroundImage: AssetImage(
-                                    reviewsDetails[index]['img']),
+                                backgroundImage:
+                                    AssetImage(reviewsDetails[index]['img']),
                               ),
                             ),
                             const SizedBox(
                               width: 5,
                             ),
                             Column(
-                              crossAxisAlignment:
-                              CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
                                   reviewsDetails[index]['name'],
@@ -80,8 +78,7 @@ class ReviewsDetails extends StatelessWidget {
                           child: Text(
                             reviewsDetails[index]['review'],
                             style: const TextStyle(
-                                color: kPrimaryDarkGrayColor,
-                                fontSize: 14),
+                                color: kPrimaryDarkGrayColor, fontSize: 14),
                           ),
                         ),
                       ],

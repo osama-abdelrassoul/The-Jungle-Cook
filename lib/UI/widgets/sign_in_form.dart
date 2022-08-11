@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:the_jungle_cook/widgets/widgets.dart';
+import 'package:the_jungle_cook/UI/widgets/widgets.dart';
 import 'package:the_jungle_cook/constants.dart';
 
 class SignInForm extends StatelessWidget {

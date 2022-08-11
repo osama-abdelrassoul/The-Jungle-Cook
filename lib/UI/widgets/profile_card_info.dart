@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../constants.dart';
-import '../json/profile_details.dart';
+import 'package:the_jungle_cook/constants.dart';
+import 'package:the_jungle_cook/json/profile_details.dart';
 
 class ProfileCardInfo extends StatelessWidget {
   const ProfileCardInfo({
@@ -36,7 +36,7 @@ class ProfileCardInfo extends StatelessWidget {
               Text(
                 infoCard[index]['name'],
                 style:
-                const TextStyle(color: kPrimaryDarkBlueColor, fontSize: 15),
+                    const TextStyle(color: kPrimaryDarkBlueColor, fontSize: 15),
               )
             ],
           ),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:the_jungle_cook/pages/pages.dart';
+import 'package:the_jungle_cook/UI/screens/screens.dart';
 import 'package:the_jungle_cook/utilities.dart';
 import 'package:the_jungle_cook/constants.dart';
-import 'package:the_jungle_cook/widgets/widgets.dart';
-import '../json/profile_details.dart';
+import 'package:the_jungle_cook/UI/widgets/widgets.dart';
+import 'package:the_jungle_cook/json/profile_details.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -60,7 +60,7 @@ class _ProfilePageState extends State<ProfilePage> {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
               color: Colors.blue,
-              image: DecorationImage(
+              image: const DecorationImage(
                 image: AssetImage(
                   us,
                 ),
@@ -75,7 +75,7 @@ class _ProfilePageState extends State<ProfilePage> {
           style: TextStyle(color: Colors.black),
         ),
         Text(
-          "Mr botato",
+          "Mr Potato",
           style: TextStyle(color: Colors.black.withOpacity(0.3)),
         ),
         SizedBox(
@@ -191,7 +191,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   SizedBox(
                     height: screenSize.height * 0.022,
                   ),
-                  RecipesCard(screenSize: screenSize)
+                  SmallRecipeCard(screenSize: screenSize)
                 ],
               )
       ]),
