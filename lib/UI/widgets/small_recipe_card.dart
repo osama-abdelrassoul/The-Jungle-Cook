@@ -22,7 +22,7 @@ class SmallRecipeCard extends StatelessWidget {
         child: Column(
           children: List.generate(recipesDetails.length, (index) {
             return Padding(
-              padding: const EdgeInsets.only(top: 8.0),
+              padding: const EdgeInsets.only(top: 7.0),
               child: SizedBox(
                 width: screenSize.width * 0.9,
                 child: Stack(
