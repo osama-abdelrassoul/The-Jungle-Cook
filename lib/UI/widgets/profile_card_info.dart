@@ -23,7 +23,6 @@ class ProfileCardInfo extends StatelessWidget {
             borderRadius: BorderRadius.circular(5),
           ),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(

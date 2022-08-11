@@ -1,42 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:the_jungle_cook/UI/screens/screens.dart';
+import 'package:the_jungle_cook/UI/widgets/custom_app_bar.dart';
 import 'package:the_jungle_cook/utilities.dart';
 import 'package:the_jungle_cook/constants.dart';
 import 'package:the_jungle_cook/UI/widgets/widgets.dart';
 import 'package:the_jungle_cook/json/profile_details.dart';
 
-class ProfilePage extends StatefulWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({Key? key}) : super(key: key);
 
   @override
-  State<ProfilePage> createState() => _ProfilePageState();
+  State<ProfileScreen> createState() => _ProfileScreenState();
 }
 
-class _ProfilePageState extends State<ProfilePage> {
+class _ProfileScreenState extends State<ProfileScreen> {
   int activeMenu = 0;
   double avatarRadius = 20;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: getAppBar(),
-      body: getBody(),
-    );
-  }
-
-  PreferredSizeWidget getAppBar() {
-    return AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: const Icon(
-            Icons.arrow_back_ios,
-            color: Colors.grey,
-          ),
-        ),
+      appBar: CustomAppBar(
         actions: [
           IconButton(
               onPressed: () {},
@@ -45,7 +29,11 @@ class _ProfilePageState extends State<ProfilePage> {
                 size: 28,
               ),
               color: Colors.grey),
-        ]);
+        ],
+        targetScreen: const RootApp(),
+      ),
+      body: getBody(),
+    );
   }
 
   Widget getBody() {
@@ -87,7 +75,6 @@ class _ProfilePageState extends State<ProfilePage> {
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             GestureDetector(
               onTap: () {

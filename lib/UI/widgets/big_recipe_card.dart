@@ -31,8 +31,8 @@ class BigRecipeCard extends StatelessWidget {
       children: [
         Container(
           margin: EdgeInsets.all(avatarRadius / 2),
-          height: screenSize.height * .6,
-          width: screenSize.width * 0.60,
+          height: screenSize.height * 0.6,
+          width: screenSize.width * 0.6,
           decoration: BoxDecoration(
             color: backgroundColor,
             borderRadius: const BorderRadius.all(
