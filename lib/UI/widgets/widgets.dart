@@ -11,3 +11,5 @@ export 'profile_card_info.dart';
 export 'genre_card.dart';
 export 'small_recipe_card.dart';
 export 'custom_app_bar.dart';
+export 'animated_logo.dart';
+export 'text_and_text_button.dart';

@@ -96,14 +96,7 @@ class LandingScreen extends StatelessWidget {
           Positioned(
             bottom: screenSize.height / 2,
             left: screenSize.width / 2 - avatarRadius,
-            child: Hero(
-              tag: 'logo',
-              child: CircleAvatar(
-                radius: avatarRadius,
-                backgroundColor: Colors.white,
-                child: Image.asset(kLogo),
-              ),
-            ),
+            child: AnimatedLogo(avatarRadius: avatarRadius),
           ),
         ],
       ),

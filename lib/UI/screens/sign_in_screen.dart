@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:the_jungle_cook/constants.dart';
 import 'package:the_jungle_cook/UI/screens/screens.dart';
 import 'package:the_jungle_cook/utilities.dart';
 import 'package:the_jungle_cook/UI/widgets/widgets.dart';
@@ -14,19 +13,12 @@ class SignInScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: CustomAppBar(
-        targetScreen: LandingScreen(),
+        targetScreen: const LandingScreen(),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Hero(
-              tag: 'logo',
-              child: CircleAvatar(
-                radius: avatarRadius,
-                backgroundColor: Colors.white,
-                child: Image.asset(kLogo),
-              ),
-            ),
+            AnimatedLogo(avatarRadius: avatarRadius),
             SignInForm(screenSize: screenSize),
             const SizedBox(height: 10),
             CustomButton(
@@ -34,24 +26,9 @@ class SignInScreen extends StatelessWidget {
               isPrimaryButton: true,
               onPressed: () {},
             ),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const Text('Don\'t have an account?'),
-                TextButton(
-                  onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (BuildContext context) => const SignUpScreen(),
-                      ),
-                    );
-                  },
-                  child: const Text(
-                    'click here',
-                  ),
-                )
-              ],
+            const TextAndTextButton(
+              text: 'Don\'t have an account?',
+              targetScreen: SignUpScreen(),
             ),
           ],
         ),

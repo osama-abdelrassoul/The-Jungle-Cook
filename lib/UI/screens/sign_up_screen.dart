@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:the_jungle_cook/constants.dart';
 import 'package:the_jungle_cook/utilities.dart';
 import 'package:the_jungle_cook/UI/widgets/widgets.dart';
 import 'package:the_jungle_cook/UI/screens/screens.dart';
@@ -14,50 +13,26 @@ class SignUpScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: CustomAppBar(
-        targetScreen: LandingScreen(),
-        titleWidget: Text(
+        targetScreen: const LandingScreen(),
+        titleWidget: const Text(
           'Back',
         ),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Hero(
-              tag: 'logo',
-              child: CircleAvatar(
-                radius: avatarRadius,
-                backgroundColor: Colors.white,
-                child: Image.asset(kLogo),
-              ),
-            ),
-            SignUpForm(
-              screenSize: screenSize,
-            ),
+            AnimatedLogo(avatarRadius: avatarRadius),
+            SignUpForm(screenSize: screenSize),
             const SizedBox(height: 10),
             CustomButton(
               title: 'Sign Up',
               isPrimaryButton: true,
               onPressed: () {},
             ),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const Text('Already have an account?'),
-                TextButton(
-                  onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (BuildContext context) => const SignInScreen(),
-                      ),
-                    );
-                  },
-                  child: const Text(
-                    'click here',
-                  ),
-                )
-              ],
-            ),
+            const TextAndTextButton(
+              text: 'Already have an account?',
+              targetScreen: SignInScreen(),
+            )
           ],
         ),
       ),
