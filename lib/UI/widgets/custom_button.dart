@@ -24,7 +24,7 @@ class CustomButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        primary: isPrimaryButton ? kPrimaryOrangeColor : Colors.white,
+        backgroundColor: isPrimaryButton ? kPrimaryOrangeColor : Colors.white,
         fixedSize: Size(screenSize.width * 0.75, buttonHeight),
         side: isPrimaryButton
             ? null

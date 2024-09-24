@@ -20,7 +20,7 @@ class CustomBackButton extends StatelessWidget {
             );
           },
           style: ElevatedButton.styleFrom(
-            primary: Colors.white,
+            backgroundColor: Colors.white,
             elevation: 0,
           ),
           child: Row(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_jungle_cook/constants.dart';
 
-class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   final Size preferredSize;
 
@@ -9,7 +9,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   final List<Widget>? actions;
   final Widget targetScreen;
 
-  CustomAppBar({
+  const CustomAppBar({
     Key? key,
     this.titleWidget,
     this.actions,

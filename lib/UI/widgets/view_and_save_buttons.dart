@@ -17,7 +17,7 @@ class ViewAndSaveButtons extends StatelessWidget {
           child: ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-              primary: mainColor.withOpacity(0.2),
+              backgroundColor: mainColor.withOpacity(0.2),
               elevation: 0,
               enableFeedback: false,
             ),
@@ -37,7 +37,7 @@ class ViewAndSaveButtons extends StatelessWidget {
           child: ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
-              primary: mainColor,
+              backgroundColor: mainColor,
               elevation: 0,
               enableFeedback: false,
             ),
