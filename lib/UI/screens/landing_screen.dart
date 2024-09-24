@@ -44,11 +44,11 @@ class LandingScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Expanded(
+              const Expanded(
                 flex: 5,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     Text(
                       'Ready to start a journey full of',
                       style: TextStyle(
@@ -73,7 +73,7 @@ class LandingScreen extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (BuildContext context) => SignInScreen(),
+                      builder: (BuildContext context) => const SignInScreen(),
                     ),
                   );
                 },
@@ -85,7 +85,7 @@ class LandingScreen extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (BuildContext context) => SignUpScreen(),
+                      builder: (BuildContext context) => const SignUpScreen(),
                     ),
                   );
                 },

@@ -24,7 +24,11 @@ class SignInScreen extends StatelessWidget {
             CustomButton(
               title: 'Sign In',
               isPrimaryButton: true,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => RootApp(),
+                ));
+              },
             ),
             const TextAndTextButton(
               text: 'Don\'t have an account?',
